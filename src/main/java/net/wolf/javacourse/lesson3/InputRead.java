@@ -12,19 +12,23 @@ import java.util.Scanner;
  * @author Andrey
  */
 class InputRead {
+        
+        static void echo() {
+                System.out.println("Введите любую строку и вы увидите эхо :)!");
+                Scanner scanner = new Scanner(System.in);        
 
-    public static void main(String[] args) {
-        System.out.println("Введите любую строку!");
-        Scanner scanner = new Scanner(System.in);
+                while (scanner.hasNextLine()) {
+                        String line = scanner.nextLine().trim();
 
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine().trim();
+                        if (line.trim().equalsIgnoreCase("exit")) {
+                                break;
+                        }
 
-             if (line.trim().equalsIgnoreCase("exit")) {
-                break;
-            }
-
-            System.out.printf("Вы ввели строку %s %n", line);
+                        System.out.printf("ЭХО: %s %n", line);
+                }
         }
-    }
+
+        public static void main(String[] args) {
+                echo();
+        }
 }
