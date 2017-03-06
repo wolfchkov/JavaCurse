@@ -5,6 +5,7 @@
  */
 package net.wolf.javacourse.lesson3;
 
+import java.nio.charset.Charset;
 import java.util.Scanner;
 
 /**
@@ -15,7 +16,8 @@ class InputRead {
         
         static void echo() {
                 System.out.println("Введите любую строку и вы увидите эхо :)!");
-                Scanner scanner = new Scanner(System.in);        
+                
+                Scanner scanner = new Scanner(System.in);
 
                 while (scanner.hasNextLine()) {
                         String line = scanner.nextLine().trim();
