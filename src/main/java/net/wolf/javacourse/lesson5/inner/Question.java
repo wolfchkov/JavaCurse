@@ -27,7 +27,7 @@ public class Question {
                 this.type = type;
         }
 
-        public static enum Type {
+        static enum Type {
                 SINGLE_CHOICE, MULIT_CHOICE, TEXT
         }
         

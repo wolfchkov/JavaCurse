@@ -10,8 +10,8 @@ package net.wolf.javacourse.lesson5.enm;
  * @author Andrey
  */
 public enum Planet {
-    MERCURY(3.303e+23, 2.4397e6),
     VENUS(4.869e+24, 6.0518e6),
+    MERCURY(3.303e+23, 2.4397e6),
     EARTH(5.976e+24, 6.37814e6),
     MARS(6.421e+23, 3.3972e6),
     JUPITER(1.9e+27, 7.1492e7),
@@ -31,11 +31,11 @@ public enum Planet {
         this.radius = radius;
     }
 
-    private double mass() {
+    public double mass() {
         return mass;
     }
 
-    private double radius() {
+    public double radius() {
         return radius;
     }
    
@@ -49,8 +49,9 @@ public enum Planet {
 
     public static void main(String[] args) {
         
-        double earthWeight = 91;
+        double earthWeight = 93;
         double mass = earthWeight / EARTH.surfaceGravity();
+        
         
         for (Planet p : Planet.values()) {
             System.out.printf("Ваша масса на %s будет составлять %f КГ! %n",

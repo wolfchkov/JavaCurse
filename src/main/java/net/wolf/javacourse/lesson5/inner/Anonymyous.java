@@ -44,6 +44,17 @@ public class Anonymyous {
                         }
                 });
                 
+                StringHandler toUpperHandler = new StringHandler() {
+                    @Override
+                    public String handle(String str) {
+                        return str.toUpperCase();
+                    }
+                };
+                
+                System.out.println(toUpperHandler.getClass().getName());
+                
+                anonymyous.arrayHandler(toUpperHandler);
+                
         }
 
 }
