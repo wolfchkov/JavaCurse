@@ -13,13 +13,18 @@ public class Point3D extends Point2D {
         
         protected float z;
 
-        public Point3D(float z, float x, float y) {
-                super(x, y);
-                this.z = z;
+        public Point3D(float x, float y, float z) {
+            super(x);
+            this.z = z;
         }
-
+        
         public float getZ() {
-                return z;
+            
+            return z;
+        }
+        
+        public Point2D getPoint2D() {            
+            return new Point2D(x, y);
         }
 
 }
