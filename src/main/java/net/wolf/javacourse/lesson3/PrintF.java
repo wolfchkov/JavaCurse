@@ -17,7 +17,8 @@ public class PrintF {
                 String s2 = "Строка2";
                 String s3 = "Строка3";
                 
-                System.out.printf("\tПодставим 3 строки \"%s\"; \"%s\", '%s\'.", s1, s2, s3);
+                System.out.printf("\tПодставим 3 строки \"%s\"; \"%s\", '%s\'.%n", s1, s2, s3);
+           
         }
 }
 
