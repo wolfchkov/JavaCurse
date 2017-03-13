@@ -19,11 +19,12 @@ public class SomeB extends SomeA{
         }
 
         public SomeB() {
-                System.out.println("Констуируем SomeB");
+            System.out.println("Констуируем SomeB");
         }
         
         public static void main(String[] args) {
                 SomeB someB1 = new SomeB();
                 SomeB someB2 = new SomeB();                
+                SomeB someB3 = new SomeB();                
         }
 }

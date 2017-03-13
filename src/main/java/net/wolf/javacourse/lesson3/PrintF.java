@@ -5,20 +5,17 @@
  */
 package net.wolf.javacourse.lesson3;
 
-
 /**
  *
  * @author Andrey
  */
 public class PrintF {
-        
-        public static void main(String[] args) {
-                String s1 = "Строка1";
-                String s2 = "Строка2";
-                String s3 = "Строка3";
-                
-                System.out.printf("\tПодставим 3 строки \"%s\"; \"%s\", '%s\'.%n", s1, s2, s3);
-           
-        }
-}
 
+    public static void main(String[] args) {
+        String s1 = "Строка1";
+        String s2 = "Строка2";
+        String s3 = "Строка3";
+
+        System.out.printf("\tПодставим 3 строки \"%s\"; \"%s\", '%s\'.", s1, s2, s3);
+    }
+}

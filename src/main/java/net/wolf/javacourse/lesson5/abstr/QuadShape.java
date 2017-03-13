@@ -10,7 +10,7 @@ package net.wolf.javacourse.lesson5.abstr;
  * @author Andrey
  */
 public class QuadShape extends Shape {
-   public int a = 15;
+    public int a = 15;
     private final int width;
 
     public QuadShape(int width, int x, int y, String color) {

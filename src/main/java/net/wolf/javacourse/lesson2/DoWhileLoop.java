@@ -5,6 +5,8 @@
  */
 package net.wolf.javacourse.lesson2;
 
+import java.math.BigInteger;
+
 /**
  *
  * @author Andrey
@@ -67,9 +69,17 @@ public class DoWhileLoop {
         }  while (true);
 
     }
+    
+    
+    static BigInteger fact(BigInteger n) {
+        if (n.equals(BigInteger.ONE)) {
+            return BigInteger.ONE;
+        }
+        
+        return fact(n.subtract(BigInteger.ONE)).multiply(n);
+    }
 
     public static void main(String args[]) {
-        infinityLoop();
-        
+        System.out.println(fact(BigInteger.valueOf(1000)));
     }
 }

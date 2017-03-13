@@ -13,7 +13,8 @@ public class LocalClass {
         
         
         
-        public void someMethod() {
+        public void someMethod(int var) {
+                final int var2 = var;
                 class MinMax {
                         private final int a;
                         private final int b;
@@ -24,6 +25,7 @@ public class LocalClass {
                         }
                         
                         int max() {
+                            int c = var2 + a;
                                 return a > b ? a : b;
                         }
                         
@@ -31,7 +33,7 @@ public class LocalClass {
                                 return a < b ? a : b;
                         }                        
                 }
-                
+               var = 15;
                 
                 MinMax minMax1 = new MinMax(10, 30);
                 MinMax minMax2 = new MinMax(145640, 4654654);
@@ -41,6 +43,6 @@ public class LocalClass {
         }
         
         public static void main(String[] args) {
-                new LocalClass().someMethod();
+                new LocalClass().someMethod(10);
         }
 }

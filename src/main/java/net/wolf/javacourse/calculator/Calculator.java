@@ -37,6 +37,6 @@ public class Calculator {
         Calculator calculator = new Calculator();
         
         System.out.println( calculator.calculate(456.546, 545.5465, "*") );
-        System.out.println( calculator.calculate(456.546, 545.5465, "/") );
+        System.out.println( calculator.calculate(456.546, 545.5465, "-") );
     }
 }

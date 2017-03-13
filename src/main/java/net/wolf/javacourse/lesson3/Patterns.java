@@ -16,16 +16,17 @@ import java.util.regex.Pattern;
 public class Patterns {
 
         static void pasportSeries() {
-                Pattern pattern = Pattern.compile("^[A-Z]{2}\\d{4}$");
+                Pattern pattern = Pattern.compile("^[A-Z]{2}[0-9]{4}$");
                 Scanner scan = new Scanner(System.in);
                 System.out.print("Введите серию паспорта: ");
                 while (scan.hasNextLine()) {
                         String line = scan.nextLine();
                         if (pattern.matcher(line).matches()) {
-                                System.out.print("Серия паспорта введена правильно! ");
+                                System.out.println("Серия паспорта введена правильно! ");
                                 return;
-                        } else {
-                                System.out.print("Серия паспорта введена неверно! ");
+                        } else {                            
+                            System.out.println("Серия паспорта введена неверно! ");
+                            System.out.print("Введите серию паспорта: ");                            
                         }
                 }
         }
@@ -37,16 +38,34 @@ public class Patterns {
                 Matcher m = p.matcher(stringToSearch);
 
                 if (m.find()) {
-                        System.out.println("Надйенно групп " + m.groupCount());
-                        String group1 = m.group(1);
-                        String group2 = m.group(2);
+                    System.out.println("Надйенно групп " + m.groupCount());
+                    for(int i = 0; i < m.groupCount(); ++i) {
+                        String group = m.group(i);
+                        System.out.format("'%s' %n",group); 
+                    }
 
-                        System.out.format("'%s', '%s'\n", group1, group2);
                 }
 
         }
 
         public static void main(String[] args) {
-                matchGroups();
+            String name = "435345345";
+                    
+            int maxLength = name.length() + 4;
+                    
+            for(int i = 0; i < maxLength; i++) {
+                System.out.print("*");
+            }
+            matchGroups();
+            System.out.println();
+            System.out.print("* ");
+            System.out.print(name);
+            System.out.println(" *");
+            for(int i = 0; i < maxLength; i++) {
+                System.out.print("*");
+            }
+            matchGroups();
+            
+            
         }
 }

@@ -10,21 +10,38 @@ package net.wolf.javacourse.lesson4;
  * @author Andrey
  */
 public class Point2D {
-        protected float x;        
-        protected float y;
 
-        public Point2D(float x, float y) {
-                this.x = x;
-                this.y = y;
-        }
+    public static final float ZERO = 0.0f;
 
-        public float getX() {
-                return x;
-        }
+    protected float x;
+    protected float y;
 
-        public float getY() {
-                return y;
-        }
-        
-        
+    public static Point2D sameXY(float c) {
+        return new Point2D(c);
+    }
+
+    public Point2D(float x, float y) {
+        this.x = x;
+        this.y = y;
+    }
+
+//    public Point2D() {
+//        x = y = 0.f;
+//    }
+    protected Point2D(float c) {
+        this(c, c);
+    }
+
+    public static void methodStatic() {
+        System.out.println(ZERO);
+    }
+
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
 }

@@ -125,7 +125,7 @@ public class OperatorSwitch {
     }
     
     public static void switch4() {
-        String month = "Май";
+        String month = "МАЙ";
         int monthNumber = 0;
 
         switch (month.toLowerCase()) {
@@ -175,10 +175,6 @@ public class OperatorSwitch {
     }    
 
     public static void main(String args[]) {
-        switch1();
-        //switch2();
-        //switch3();
-        //switch4();
-
+        switch4();
     }
 }

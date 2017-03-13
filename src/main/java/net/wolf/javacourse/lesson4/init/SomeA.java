@@ -25,7 +25,8 @@ public class SomeA {
         
         public static void main(String[] args) {
                 SomeA someA1 = new SomeA();
-                SomeA someA2 = new SomeA();                
+                SomeA someA2 = new SomeA();             
+                SomeA someA3 = new SomeA();             
         }
         
 }
