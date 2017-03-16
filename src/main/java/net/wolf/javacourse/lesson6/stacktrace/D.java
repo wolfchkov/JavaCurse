@@ -10,8 +10,11 @@ package net.wolf.javacourse.lesson6.stacktrace;
  * @author Andrey
  */
 public class D {
-        
-         public String methodD(String s) {
-                return s.trim();
+
+    public String methodD(String s) {
+        if (s == null) {
+            return "null";
         }
+        return s.toUpperCase();
+    }
 }

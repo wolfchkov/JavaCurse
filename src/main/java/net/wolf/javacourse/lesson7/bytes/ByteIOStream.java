@@ -39,6 +39,6 @@ public class ByteIOStream {
         
         public static void main(String[] args) {
                 bis();
-                bos();
+                //bos();
         }
 }

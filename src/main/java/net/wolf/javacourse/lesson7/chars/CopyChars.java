@@ -6,9 +6,11 @@
 package net.wolf.javacourse.lesson7.chars;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 /**
@@ -42,11 +44,14 @@ public class CopyChars {
         static void copyByLine(String fileFrom, String fileTo) throws IOException {
                 BufferedReader inputStream = null;
                 PrintWriter outputStream = null;
+                
+
 
                 try {
                         inputStream = new BufferedReader(new FileReader(fileFrom));
                         outputStream = new PrintWriter(new FileWriter(fileTo));
 
+                        
                         String l;
                         while ((l = inputStream.readLine()) != null) {
                                 outputStream.println(l);
@@ -63,6 +68,6 @@ public class CopyChars {
 
         public static void main(String[] args) throws IOException {
 
-                copyByChar("D:\\book.txt", "E:\\book.txt");
+                copyByLine("c:\\javaio\\bio\\test.txt", "c:\\javaio\\nio\\test.txt");
         }
 }

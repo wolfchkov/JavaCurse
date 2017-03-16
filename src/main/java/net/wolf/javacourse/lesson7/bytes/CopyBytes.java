@@ -8,33 +8,25 @@ package net.wolf.javacourse.lesson7.bytes;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * Пример использования FileInputStream и FileOutputStream.
+ *
  * @author Andrey
  */
 public class CopyBytes {
 
-        public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
-                FileInputStream in = null;
-                FileOutputStream out = null;
-
-                try {
-                        in = new FileInputStream("someFile.txt");
-                        out = new FileOutputStream("someCopy.txt");
-                        int c;
-
-                        while ((c = in.read()) != -1) {
-                                out.write(c);
-                        }
-                } finally {
-                        if (in != null) {
-                                in.close();
-                        }
-                        if (out != null) {
-                                out.close();
-                        }
+        try (InputStream in = new FileInputStream("c:\\javaio\\bio\\test.txt");) {
+            try (OutputStream out = new FileOutputStream("c:\\javaio\\nio\\test.txt");) {
+                int c;
+                while ((c = in.read()) != -1) {
+                    out.write(c);
                 }
+            }
         }
+    }
 }

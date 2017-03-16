@@ -23,7 +23,7 @@ public class TryOneCatch {
                                 String objStr = obj.toString();
                         }
 
-                } catch (ArithmeticException | NullPointerException ae) {
+                } catch (ArithmeticException | NullPointerException  ae) {
 
                         System.err.println("Мы либо поделили на 0 либо обратились к null ссылке!");
                         System.err.println(ae.getClass().getName());

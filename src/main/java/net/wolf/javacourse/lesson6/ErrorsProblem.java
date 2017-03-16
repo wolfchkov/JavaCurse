@@ -10,5 +10,15 @@ package net.wolf.javacourse.lesson6;
  * @author Andrey
  */
 public class ErrorsProblem {
+    
+    public static double sqrt(double a) {
+        if (a >= 0.0) {
+            return Math.sqrt(a);
+        }
+        return -1.0;
+    }
         
+    public static void main(String[] args) {
+        
+    }
 }

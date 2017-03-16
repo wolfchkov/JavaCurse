@@ -52,15 +52,15 @@ public class PathExamples {
         }
         
         static void relativePaths() {
-                Path path1 = Paths.get("E:\\Install\\putty\\pscp.exe");
-                Path path2 = Paths.get("E:\\music");
+                Path path1 = Paths.get("c:\\javanio\\bio");
+                Path path2 = Paths.get("c:\\data");
                 System.out.format("%s%n", path1.relativize(path2));
                 System.out.format("%s%n", path1.relativize(path2).toAbsolutePath());
                 
         }
         
         public static void main(String[] args) {
-                //pathMethods(Paths.get("E:\\Install\\putty\\pscp.exe"));
+                //pathMethods(Paths.get("c:\\javanio","bio"));
                 //pathMethods(Paths.get(".\\"));
                 //joinPaths();
                 relativePaths();

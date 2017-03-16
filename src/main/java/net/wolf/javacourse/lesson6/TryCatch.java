@@ -31,7 +31,7 @@ public class TryCatch {
 
                         System.err.println("Упс! Мы вызвали метод у null!");
 
-                }
+                } 
 
                 System.err.println("А это мы написали после try-catch!");
         }

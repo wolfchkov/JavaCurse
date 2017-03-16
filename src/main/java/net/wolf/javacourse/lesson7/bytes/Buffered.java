@@ -37,8 +37,8 @@ public class Buffered {
                         System.err.println(ex);
                         return;
                 }
-                //try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file), 128 * 1024);) {
-                try (FileInputStream bis = new FileInputStream(file);) {
+                try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file), 128 * 1024);) {
+                //try (FileInputStream bis = new FileInputStream(file);) {
                         DigestInputStream dis = new DigestInputStream(bis, md5);
                         while (dis.read() != -1) {
                                 
@@ -50,9 +50,9 @@ public class Buffered {
         }
         
         static void bufferedWrite(String file) throws IOException {                
-                //try (DataOutputStream bos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)));) {
-                try (DataOutputStream bos = new DataOutputStream(new FileOutputStream(file));) {
-                        for (int i = 0; i < 1_000_000; ++i) {
+                try (DataOutputStream bos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)));) {
+                //try (DataOutputStream bos = new DataOutputStream(new FileOutputStream(file));) {
+                        for (int i = 0; i < 1000_000; ++i) {
                                 bos.writeInt(i);
                         }
                 }
@@ -61,8 +61,10 @@ public class Buffered {
         
         public static void main(String[] args) {
                 try {
-                        //bufferedRead("D:\\Films\\stylized_levi.blend");
-                        bufferedWrite("D:\\test.txt");
+                        //bufferedRead("C:\\ideaIC-2016.3.4.exe");
+                        long startTime = System.currentTimeMillis();
+                        bufferedWrite("c:\\javaio\\data.bin");
+                        System.out.printf("Мы записали файл за %d милисекунд", (System.currentTimeMillis() - startTime));
                 } catch (IOException ex) {
                         System.err.println(ex);
                 }

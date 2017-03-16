@@ -8,7 +8,7 @@ package net.wolf.javacourse.lesson7.niof;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.*;
-import static java.nio.file.StandardCopyOption.*;
+import java.nio.file.StandardCopyOption;
 import static java.nio.file.StandardOpenOption.*;
 import java.util.List;
 
@@ -26,7 +26,7 @@ public class FilesExamples {
          */
         static void someMethods() {
                 //Проверим - существует ли файл
-                Path file = Paths.get("d:\\book.txt");
+                Path file = Paths.get("c:\\javaio\\bio\\test.txt");
                 System.out.printf("Files.exists : %b%n", Files.exists(file));
                 System.out.printf("Files.notExists : %b%n", Files.notExists(file));
 
@@ -35,7 +35,7 @@ public class FilesExamples {
         }
 
         static void delete() {
-                Path file = Paths.get("d:\\book.txt");
+                Path file = Paths.get("c:\\javaio\\bio\\test.txt");
                 try {
                         Files.delete(file);
                         //Files.deleteIfExists(file);
@@ -53,7 +53,7 @@ public class FilesExamples {
                 Path src = Paths.get("d:\\book.txt");
                 Path dest = Paths.get("e:\\book.txt");
                 try {
-                        Files.copy(src, dest, REPLACE_EXISTING);
+                        Files.copy(src, dest, StandardCopyOption.REPLACE_EXISTING);
                 
                 } catch (IOException x) {
                         // Какая то проблема
@@ -65,9 +65,9 @@ public class FilesExamples {
                 Path file = Paths.get("d:\\book.txt");
                 
                 try {
-                        byte[] allBytes = Files.readAllBytes(file);
+                        //byte[] allBytes = Files.readAllBytes(file);
                         //List<String> allLines = Files.readAllLines(file);
-                        //BufferedReader a = Files.newBufferedReader(file);
+                        BufferedReader a = Files.newBufferedReader(file);
                 
                 } catch (IOException x) {
                         // Какая то проблема
@@ -89,8 +89,11 @@ public class FilesExamples {
                 }
         }               
 
-        public static void main(String[] args) {
-
-              copy();
+        public static void main(String[] args) throws IOException {
+            DirectoryStream<Path> newDirectoryStream = Files.newDirectoryStream(Paths.get("C:\\javaio"));
+            for(Path path : newDirectoryStream) {
+                System.out.println(path.toAbsolutePath());
+            }
+            //delete();
         }
 }

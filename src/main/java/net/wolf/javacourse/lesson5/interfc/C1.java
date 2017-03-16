@@ -33,21 +33,14 @@ public class C1 implements C {
 
    public static void main(String[] args) {
        C1 c1 = new C1();
+       Object e = new Exception();
        
-       A a = c1;
+       A c2 = c1;
+       
        B b = c1;
-       C c = c1;
        
-       a.methodA();
-       a.method();
+       C c = (C) c2;     
        
-       b.methodB();
-       b.methodA();
-       
-       c.methodA();
-       c.methodB();
-       c.methodC();
-       c.method();
        
        
    }

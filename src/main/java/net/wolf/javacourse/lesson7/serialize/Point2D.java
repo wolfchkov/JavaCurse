@@ -29,11 +29,9 @@ public class Point2D implements Serializable {
         return y;
     }
 
-        @Override
-        public String toString() {
-                return "Точка (" + x + ";" + y + ')';
-        }
-    
-    
+    @Override
+    public String toString() {
+        return "Точка (" + x + ";" + y + ')';
+    }
 
 }

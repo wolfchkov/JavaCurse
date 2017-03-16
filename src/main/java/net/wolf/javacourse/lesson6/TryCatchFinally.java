@@ -12,21 +12,22 @@ import java.util.concurrent.ThreadLocalRandom;
  * @author Andrey
  */
 public class TryCatchFinally {
+
+    public static int div(int a, int b) {
+        int res;
+        try {
+            res = a / b;
+            return res;
+        } catch (ArithmeticException ae) {
+            System.err.println("Упс! Мы поделили на 0!");
+            return -1;
+        } finally {
+            System.err.println("Мы в блоке finally!");            
+        }       
+    }
+
+    public static void main(String[] args) {
         
-        //выход из метода
-
-        public static void main(String[] args) {
-                int a = 0;
-                try {
-                        a = 45 / 0;
-                } catch (ArithmeticException ae) {
-                        System.err.println("Упс! Мы поделили на 0!");
-
-                } finally {
-                        System.err.println("Мы в блоке finally!");
-                        a = -1;
-                }
-
-                System.err.println("Переменная a = " + a);
-        }
+        System.err.println(div(10,0));
+    }
 }

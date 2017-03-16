@@ -5,20 +5,36 @@
  */
 package net.wolf.javacourse.lesson6;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Andrey
  */
 public class CheckedException {
         
-        public double sqrt(double d) throws Exception {
+        public static double sqrt(double d)  {
+            try {
                 if ( d < 0) {
-                        throw new Exception();
+                    throw new Exception();
                 }
+            } catch(Exception ex) {
+                
+            }
                 return Math.sqrt(d);
         }
         
-        public static void main(String[] args) {
-               
+        public static void main(String[] args)  {
+            int[] a = new int[10];
+            try {
+                int i = 0;
+                while(true){
+                    a[i++] = 1;
+                }
+            } catch(IndexOutOfBoundsException ex) {
+                
+            }
+            
+            System.out.println(Arrays.toString(a));
         }
 }

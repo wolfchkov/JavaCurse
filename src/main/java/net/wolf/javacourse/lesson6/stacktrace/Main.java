@@ -12,11 +12,10 @@ import net.wolf.javacourse.lesson6.UncheckedException;
  * @author Andrey
  */
 public class Main {
+        private static final Exception EX = new Exception();
         
-        public static void main(String[] args) {
-                A a = new A();
-                //a.methodA("                   some   str         ");
-                a.methodA(null);
+        public static void main(String[] args) throws Exception {
+                throw EX;
                 
         }
 }
