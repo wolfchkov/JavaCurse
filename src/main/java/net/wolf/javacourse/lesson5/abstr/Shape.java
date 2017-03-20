@@ -53,6 +53,8 @@ public abstract class Shape {
     public int getY() {
         return y;
     }
+    
+    
 
     public String getColor() {
         return color;
