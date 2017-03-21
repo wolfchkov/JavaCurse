@@ -90,9 +90,8 @@ public class FilesExamples {
         }               
 
         public static void main(String[] args) throws IOException {
-            DirectoryStream<Path> newDirectoryStream = Files.newDirectoryStream(Paths.get("C:\\javaio"));
-            for(Path path : newDirectoryStream) {
-                System.out.println(path.toAbsolutePath());
+            for (String arg : args) {
+                System.out.println(arg);
             }
             //delete();
         }
