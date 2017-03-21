@@ -18,7 +18,7 @@ import java.util.List;
 public class CompareMain {
     public static void main(String[] args) {
         System.out.println("Вариант сортировки через Comparator");
-        List<Employee> listEmpl = new ArrayList<Employee>();
+        List<Employee> listEmpl = new ArrayList<>();
         listEmpl.add(new Employee("Василий", LocalDate.of(1965, 3, 23)));
         listEmpl.add(new Employee("Павел", LocalDate.of(1973, 11, 23)));
         listEmpl.add(new Employee("Андрей", LocalDate.of(1969, 1, 21)));

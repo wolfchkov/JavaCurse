@@ -7,6 +7,7 @@ package net.wolf.javacourse.lesson8;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -27,15 +28,15 @@ public class LinkedLists {
                  }
                  
                  long sum = 0;
-                 for (int i = 0; i < list.size(); i++) {
-                         sum += list.get(i);
+                 for (Iterator<Integer> it = list.iterator(); it.hasNext(); ) {
+                         sum += it.next();
                  }
                  
                  System.out.printf("Сумма всех случайных чисел массива размером %d равно %d.", list.size(), sum);
          }
         
         public static void linkedList() {
-                  List<String> list = new LinkedList<>();
+                List<String> list = new LinkedList<>();
                 list.add("hi");
                 list.add("world");
                 list.add("hello");
@@ -65,6 +66,6 @@ public class LinkedLists {
         }
         
           public static void main(String[] args) {
-                  linkedListPerfomance();
+                linkedListPerfomance();
         }
 }
