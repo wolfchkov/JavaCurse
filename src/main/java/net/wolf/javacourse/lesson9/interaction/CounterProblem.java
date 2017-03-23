@@ -24,14 +24,18 @@ public class CounterProblem {
                 }
 
                 public long getCount() {
+                    synchronized(this) {
                         return count;
+                    }
                 }
 
                 public void inc() {
+                    synchronized(this) {
                         count++;
+                    }
                 }
 
-                public void dec() {
+                public synchronized void dec() {
                         count--;
                 }
         }
@@ -46,7 +50,7 @@ public class CounterProblem {
 
                 @Override
                 public void run() {
-                        for (int i = 0; i < 1000; i++) {
+                        for (int i = 0; i < 100_000; i++) {
                                 counter.inc();
                         }
                 }
@@ -71,6 +75,6 @@ public class CounterProblem {
                 th3.join();
                 th4.join();
                 
-                System.out.printf("Счетчик равен %d а должен быть равен 4000-ам!!!!", counter.getCount());
+                System.out.printf("Счетчик равен %d а должен быть равен 400_000-ам!!!!", counter.getCount());
         }
 }

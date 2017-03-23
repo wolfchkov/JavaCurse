@@ -17,8 +17,6 @@ public class ThreadCreate2 {
                 public SomeThread(int countFrom) {
                          this.countFrom = countFrom;
                 }
-                 
-                 
         
                 @Override
                 public void run() {
@@ -32,11 +30,12 @@ public class ThreadCreate2 {
         
         public static void main(String[] args) {
                 Thread thread = new Thread(new SomeThread(500));
-                
+                thread.setPriority(Thread.MAX_PRIORITY);
                 System.out.println("Мы в главном потоке!");
                 thread.start();
                 while (thread.isAlive()) {
                         System.out.println("Мы в главном потоке!");
+                        //Thread.yield();
                 }
                 System.out.println("Завершаем программу!");
                 

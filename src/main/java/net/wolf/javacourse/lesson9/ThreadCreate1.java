@@ -7,31 +7,37 @@ package net.wolf.javacourse.lesson9;
 
 /**
  * Первый способ создания потока
+ *
  * @author Andrey
  */
 public class ThreadCreate1 {
-        
-        public static class SomeThread extends Thread  {
-        
-                @Override
-                public void run() {
-                        System.out.println("Мы в отдельном потоке!");
-                        for(int i = 0; i < 1000; ++i) {
-                                System.out.println(i);
-                        }
-                        System.out.println("Поток завершен!");
-                }
+
+    public static class SomeThread extends Thread {
+
+        public SomeThread(String name) {
+            super(name);
         }
-        
-        public static void main(String[] args) {
-                Thread thread = new SomeThread();
-                
-                System.out.println("Мы в главном потоке!");
-                thread.start();
-                while (thread.isAlive()) {
-                        System.out.println("Мы в главном потоке!");
-                }
-                System.out.println("Завершаем программу!");
-                
+
+        @Override
+        public void run() {
+            System.out.printf("Мы в отдельном потоке %s!%n",
+                    Thread.currentThread().getName());
+            for (int i = 0; i < 1000; ++i) {
+                System.out.println(i);
+            }
+            System.out.printf("Поток %s завершен!%n", 
+                    Thread.currentThread().getName());
         }
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        Thread thread = new SomeThread("our-thread");
+
+        System.out.printf("Мы в главном потоке %s!%n", 
+                Thread.currentThread().getName());
+        thread.start();
+        thread.join();
+        System.out.printf("Завершаем программу %s!%n", Thread.currentThread().getName());
+
+    }
 }

@@ -50,27 +50,29 @@ public class Interrupts {
                                 double x = (double) i;
                                 res = res +  Math.sin(x) * Math.cos(1.0 / x) * Math.log(x * x);
                                 //Иногда печатаем резуультат
-                                if ((i % 100000) == 0) {
+                                if ((i % 10000) == 0) {
                                         System.out.printf("Res = %f; %n", res);
                                 }
-                                
+                                /*
                                 if ((i % 1000) == 0) {
                                         if (Thread.interrupted()) {
                                                 System.out.println("Поток прерван!");
                                                 return;
                                         }
                                 }
+                                */
+                                
                         }
                         System.out.println("Завершили считать!");
                 }
         }
         
         public static void main(String[] args) throws InterruptedException {
-                Thread thread = new Thread(new Messanger());
-                 //thread.setDaemon(true);
+                Thread thread = new Thread(new NumberCrusher());
+                thread.setDaemon(true);
                 thread.start();
-                Thread.sleep(1000);
-                //thread.interrupt();
-                //System.out.println("Прервали поток!");
+                //Thread.sleep(1000);
+                thread.interrupt();
+                System.out.println("Прервали поток!");
         }
 }
