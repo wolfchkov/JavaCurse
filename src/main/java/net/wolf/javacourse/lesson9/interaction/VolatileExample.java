@@ -5,6 +5,8 @@
  */
 package net.wolf.javacourse.lesson9.interaction;
 
+import java.util.Collections;
+
 /**
  *
  * @author Andrey
@@ -13,7 +15,7 @@ public class VolatileExample {
         
         public static class Counter extends Thread {
                 
-                private boolean run = true;
+                private volatile boolean run = true;
                 
                 public void stopThread() {
                         run = false;
@@ -32,7 +34,6 @@ public class VolatileExample {
         
         public static void main(String[] args) throws InterruptedException {
                 Counter counter = new Counter();
-                
                 
                 counter.start();
                 Thread.sleep(1000);
