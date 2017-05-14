@@ -29,108 +29,103 @@ public class MenuTestDrive {
                 allMenus.add(cafeMenu);
 
                 pancakeHouseMenu.add(new MenuItem(
-                        "K&B's Pancake Breakfast",
-                        "Pancakes with scrambled eggs, and toast",
+                        "K&B завтрак",
+                        "Блинчики с яичницей и тостами",
                         true,
                         2.99));
                 pancakeHouseMenu.add(new MenuItem(
-                        "Regular Pancake Breakfast",
-                        "Pancakes with fried eggs, sausage",
+                        "Обычный завтрак",
+                        "Блинчики с яичницей, колбасой",
                         false,
                         2.99));
                 pancakeHouseMenu.add(new MenuItem(
-                        "Blueberry Pancakes",
-                        "Pancakes made with fresh blueberries, and blueberry syrup",
+                        "Блины с черникой",
+                        "Блины, приготовленные из свежей черники и голубичного сиропа",
                         true,
                         3.49));
                 pancakeHouseMenu.add(new MenuItem(
-                        "Waffles",
-                        "Waffles, with your choice of blueberries or strawberries",
+                        "Вафли",
+                        "Вафли, с выбором: голубика или клубника",
                         true,
                         3.59));
 
                 dinerMenu.add(new MenuItem(
-                        "Vegetarian BLT",
-                        "(Fakin') Bacon with lettuce & tomato on whole wheat",
+                        "Вегетарианский завтраак",
+                        "Бекон с листьями салата и помидорами на цельной пшенице",
                         true,
                         2.99));
                 dinerMenu.add(new MenuItem(
-                        "BLT",
-                        "Bacon with lettuce & tomato on whole wheat",
-                        false,
-                        2.99));
-                dinerMenu.add(new MenuItem(
-                        "Soup of the day",
-                        "A bowl of the soup of the day, with a side of potato salad",
+                        "Суп дня",
+                        "Тарелка супа дня, со порцией картофельного салата",
                         false,
                         3.29));
                 dinerMenu.add(new MenuItem(
-                        "Hotdog",
-                        "A hot dog, with saurkraut, relish, onions, topped with cheese",
+                        "Хот-дог",
+                        "Хот-дог, с квашеной капустой, приправленный луком, покрытый сыром",
                         false,
                         3.05));
                 dinerMenu.add(new MenuItem(
-                        "Steamed Veggies and Brown Rice",
-                        "Steamed vegetables over brown rice",
+                        "Вареные овощи и коричневый рис",
+                        "Вареные овощи и коричневый рис",
                         true,
                         3.99));
 
                 dinerMenu.add(new MenuItem(
-                        "Pasta",
-                        "Spaghetti with Marinara Sauce, and a slice of sourdough bread",
+                        "Паста",
+                        "Спагетти с соусом Маринара и кусочек хлеба закваски",
                         true,
                         3.89));
 
                 dinerMenu.add(dessertMenu);
 
                 dessertMenu.add(new MenuItem(
-                        "Apple Pie",
-                        "Apple pie with a flakey crust, topped with vanilla icecream",
+                        "Яблочный пирог",
+                        "Яблочный пирог с хрустящей корочкой, покрытый ванильным мороженым",
                         true,
                         1.59));
 
                 dessertMenu.add(new MenuItem(
-                        "Cheesecake",
-                        "Creamy New York cheesecake, with a chocolate graham crust",
+                        "Чизкейк",
+                        "Сливочный Нью-йоркский чизкейк с шоколадной коркой",
                         true,
                         1.99));
                 dessertMenu.add(new MenuItem(
-                        "Sorbet",
-                        "A scoop of raspberry and a scoop of lime",
+                        "Фруктовое мороженое",
+                        "Мус из малины и ложки лайма",
                         true,
                         1.89));
 
                 cafeMenu.add(new MenuItem(
-                        "Veggie Burger and Air Fries",
-                        "Veggie burger on a whole wheat bun, lettuce, tomato, and fries",
+                        "Вегета",
+                        "Булочка с вегетами на цельной пшеничной булочке, салатом, помидором и картофелем фри",
                         true,
                         3.99));
                 cafeMenu.add(new MenuItem(
-                        "Soup of the day",
-                        "A cup of the soup of the day, with a side salad",
+                        "Суп дня",
+                        "Чашка супа, с порцией салата",
                         false,
                         3.69));
                 cafeMenu.add(new MenuItem(
-                        "Burrito",
-                        "A large burrito, with whole pinto beans, salsa, guacamole",
+                        "Буррито",
+                        "Большой буррито с целыми бобами, сальсой, гуакамоле",
                         true,
                         4.29));
 
                 cafeMenu.add(coffeeMenu);
 
                 coffeeMenu.add(new MenuItem(
-                        "Coffee Cake",
-                        "Crumbly cake topped with cinnamon and walnuts",
+                        "Кофейный торт",
+                        "Торт с корицей и грецкими орехами",
                         true,
                         1.59));
                 coffeeMenu.add(new MenuItem(
-                        "Bagel",
-                        "Flavors include sesame, poppyseed, cinnamon raisin, pumpkin",
+                        "Рогалик",
+                        "Рогалик с начинкой включающей кунжут, мак, коричный изюм, тыкву",
                         false,
                         0.69));
                 coffeeMenu.add(new MenuItem(
-                        "Biscotti",
-                        "Three almond or hazelnut biscotti cookies",
+                        "Бискотти",
+                        "Три миндальных или лесных орехов в  бисквите",
                         true,
                         0.89));
 
