@@ -13,7 +13,6 @@ public class Child extends Parent {
     
     @Override
     public void getValue() {
-        
         System.out.println("Child getValue");
         super.getValue();
     }

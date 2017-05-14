@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package net.wolf.javacourse.lesson1;
+package net.wolf.javacourse.lesson6.bigdecimal;
 
 /**
  *
  * @author Andrey
  */
-public class ShiftOp {
-
-        public static void main(String args[]) {
-           
-
+public class BigDecimalUse {
+  
+        public static void main(String[] args) {
+                System.out.println(0.1 + 0.2);
         }
 }
